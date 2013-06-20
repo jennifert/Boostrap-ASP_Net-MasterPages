@@ -18,9 +18,9 @@
         </div>
 
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Google Maps</h2>
+          <p>An example to show how Google Maps API v3 can be used with ASP.net 4.0. This example shows more than one source populating a modal. </p>
+          <p><a class="btn" href="GoogleMap.aspx">View details &raquo;</a></p>
         </div>
         <div class="span4">
           <h2>Heading</h2>

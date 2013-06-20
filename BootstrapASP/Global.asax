@@ -23,6 +23,30 @@
             }
         ); // Load Bootstrap
 
+       /* ScriptManager.ScriptResourceMapping.AddDefinition("placeholder",
+            new ScriptResourceDefinition
+            {
+                Path = "~/js/jqueryplaceholder.js",
+                DebugPath = "~/js/jqueryplaceholder.js"
+            }
+        ); // Load Placeholder*/
+        
+        ScriptManager.ScriptResourceMapping.AddDefinition("googlemapsapi",
+             new ScriptResourceDefinition
+             {
+                 Path = "http://maps.google.com/maps/api/js?sensor=false",
+                 DebugPath = "http://maps.google.com/maps/api/js?sensor=false"
+             });// Load Google Maps
+        
+        ScriptManager.ScriptResourceMapping.AddDefinition(
+           "sitejs",
+           new ScriptResourceDefinition
+           {
+               Path = "~/js/main.js",
+               DebugPath = "~/js/main.js"
+           }
+       ); // Load Bootstrap
+
     }
     
     void Application_End(object sender, EventArgs e) 

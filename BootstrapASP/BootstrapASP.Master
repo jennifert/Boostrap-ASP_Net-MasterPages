@@ -35,9 +35,9 @@
                   <a class="brand" href="#">Bootstrap 101 Template</a>
                   <div class="nav-collapse collapse">
                     <ul class="nav">
-                      <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                      <li class="active"><a href="Default.aspx"><i class="icon-home icon-white"></i> Home</a></li>
                       <li><a href="#about"><i class="icon-book"></i> Library</a></li>
-                      <li><a href="#contact"><i class="icon-envelope"></i>Contact</a></li>
+                      <li><a href="Contact.aspx"><i class="icon-envelope"></i>Contact</a></li>
                     </ul>
                   </div><!--/.nav-collapse -->
                 </div>
@@ -51,6 +51,8 @@
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="googlemapsapi" />
+                <asp:ScriptReference Name="sitejs" />
             </Scripts>
         </asp:ScriptManager>
     </form>
