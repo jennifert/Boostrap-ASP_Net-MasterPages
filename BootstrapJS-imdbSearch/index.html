@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Based off Bootstrap 101 Template from 3 RC 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
+     <style>
+        .ajaxload{display:none;}
+     </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Movie Search</h1>
+        <P class="lead">This demo uses the <a href="http://mymovieapi.com/" target="_blank">My Movie Api</a>, which is a simple way to query the IMDB database. Check out their site for more details. Please wait after clicking submit, and you may need to press twice.</p>
+        <form class="form-inline" name="MovieForm" id="MovieForm"  method="post">
+            <div class="form-group">
+              <input type="text" id="movieSearch" name="movieSearch"  class="form-control" placeholder="Type title here.">
+            </div>
+              <button type="submit"  id="submit" class="btn btn-default btn-xs" name="submit"><i class="glyphicon glyphicon-search"></i> Search IMDB</button> <span class="ajaxload">
+        <img src="/imgs/ajax-loader.gif" alt="data set loading">
+      </span>
+      </form>
+      <div class="clearfix" />      
+<div id="result"><div id="result2" />
+</div>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>-->
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond)
+    <script src="js/respond.js"></script> -->
+    <script>
+    jQuery(document).ready(function($){
+            var displayResult = " ";
+       $('#submit').on("click",function() {
+          $("#result2").empty().remove();
+             $(".ajaxload").show();
+            var movieTitle =document.getElementById('movieSearch');
+            var apiQueryUrl = "http://mymovieapi.com/?title=" + encodeURIComponent(movieTitle.value) + "&type=json&plot=full&episode=0&limit=10&yg=0&mt=M&lang=en-US&offset=0&aka=simple&release=simple&business=0&tech=0";
+            $.getJSON(apiQueryUrl, function(data){
+              displayResult += '<div id="result2">';
+              var total = data.total_found;
+              if (total > 1){
+              $.each(data.result, function(index, item){
+                      displayResult += '<h4><strong><a href="'+item.imdb_url+'" target="_blank">'+item.title+'</strong></a></h4>';
+                      displayResult += '<div class="row"><div class="col-lg-2"><a href="#"><img src="http://placehold.it/260x180" alt="Poster for: '+item.title+'" class="img-thumbnail"></a></div>';
+                      displayResult += '<div class="col-lg-10"><p>Year: '+item.year+'</p><p>Rating: '+item.rating+'</p><p>Run Time: '+item.runtime+'</p><p>'+item.plot+'</p><p><a class="btn" href="'+item.imdb_url+'" target="_blank">Read more</a> (<small>Opens in new window)</small></p></div>';
+                     displayResult += '</div><hr/>';
+                });
+              }
+              displayResult += '</div>';
+            });
+          $("#result").html(displayResult);
+              $(".ajaxload").hide();  
+          return false;
+      });
+    });
+    </script>
+  </body>
+</html>

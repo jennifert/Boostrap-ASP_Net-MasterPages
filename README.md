@@ -12,3 +12,5 @@ Web Root
 	/css
 	/fonts
 In other words, move files out of the app folder.
+
+Bootstrapjs-imdbSearch: similar to above but using only havascript. Currently troubleshooting why the results do not want to empty beforre reloading the next set.
