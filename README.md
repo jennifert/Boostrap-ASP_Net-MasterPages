@@ -7,3 +7,6 @@ Upcoming Additions:
 
 - Menu via asp.net control
 - Dynamic tabs and post from form
+- Adding cdn and cdn debug path in global.asax file for bootstrap items.
+
+Feel free to request items via the ssues functionality.
