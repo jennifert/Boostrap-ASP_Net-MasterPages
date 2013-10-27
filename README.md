@@ -9,4 +9,4 @@ Upcoming Additions:
 - Dynamic tabs and post from form
 - Adding cdn and cdn debug path in global.asax file for bootstrap items.
 
-Feel free to request items via the ssues functionality.
+Feel free to request items via the issues functionality.
