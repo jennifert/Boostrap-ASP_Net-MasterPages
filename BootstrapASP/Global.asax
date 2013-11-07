@@ -19,7 +19,9 @@
             new ScriptResourceDefinition
             {
                 Path = "~/js/bootstrap.min.js",
-                DebugPath = "~/js/bootstrap.js"
+                DebugPath = "~/js/bootstrap.js",
+                CdnPath = "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js",
+                CdnDebugPath = "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js"
             }
         ); // Load Bootstrap
 
@@ -44,6 +46,15 @@
            {
                Path = "~/js/main.js",
                DebugPath = "~/js/main.js"
+           }
+       ); // Load Bootstrap
+
+       ScriptManager.ScriptResourceMapping.AddDefinition(
+           "respondjs",
+           new ScriptResourceDefinition
+           {
+               Path = "~/js/respond.min.js",
+               DebugPath = "~/js/respond.src.js"
            }
        ); // Load Bootstrap
 

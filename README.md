@@ -7,6 +7,10 @@ Upcoming Additions:
 
 - Menu via asp.net control
 - Dynamic tabs and post from form
-- Adding cdn and cdn debug path in global.asax file for bootstrap items.
+- Add font-awesome (commented out)  if needed in projects.
+
+Last update:
+
+- November 7, 2013: Updated meta tags, and added botstrap cdn to gloabl.asax.
 
 Feel free to request items via the issues functionality.
