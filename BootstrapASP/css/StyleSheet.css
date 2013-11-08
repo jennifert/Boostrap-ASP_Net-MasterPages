@@ -2,7 +2,7 @@
         padding-top: 60px;
         padding-bottom: 40px;
  }
-
+.navbar-search{padding-top: 15px;}
  #map_canvas label { width: auto!important; display:inline!important; }
  #map_canvas img { max-width: none!important; }
 

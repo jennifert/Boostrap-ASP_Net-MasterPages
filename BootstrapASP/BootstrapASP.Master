@@ -37,14 +37,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="brand" href="#">Bootstrap 101 Template</a>
-                  <div class="nav-collapse collapse">
-                    <ul class="nav">
-                      <li class="active"><a href="Default.aspx"><i class="icon-home icon-white"></i> Home</a></li>
-                      <li><a href="#about"><i class="icon-book"></i> Library</a></li>
-                      <li><a href="Contact.aspx"><i class="icon-envelope"></i>Contact</a></li>
-                    </ul>
-                  </div><!--/.nav-collapse -->
+                  <span class="navbar-search pull-right">
+                    <input type="text" class="search-query" placeholder="Search">
+                  </span>
+                  <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="false"
+                            IncludeStyleBlock="false" Orientation="Horizontal"
+                            CssClass="nav-collapse collapse"
+                            StaticMenuStyle-CssClass="nav"
+                            StaticSelectedStyle-CssClass="active"
+                            DynamicMenuStyle-CssClass="dropdown-menu">
+                            <Items>
+                                <asp:MenuItem Text="Home" ToolTip="Home" />
+                                <asp:MenuItem Text="Demos" ToolTip="Demos">
+                                    <asp:MenuItem Text="Contact" ToolTip="Contact" />
+                                    <asp:MenuItem Text="Google Map" ToolTip="Google Map" />
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Movies" ToolTip="Movies">
+                                    <asp:MenuItem Text="Action" ToolTip="Action" />
+                                    <asp:MenuItem Text="Drama" ToolTip="Drama" />
+                                    <asp:MenuItem Text="Musical" ToolTip="Musical" />
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
                 </div>
               </div>
             </div>
