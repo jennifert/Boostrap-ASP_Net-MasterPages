@@ -49,15 +49,6 @@
            }
        ); // Load Bootstrap
 
-       ScriptManager.ScriptResourceMapping.AddDefinition(
-           "respondjs",
-           new ScriptResourceDefinition
-           {
-               Path = "~/js/respond.min.js",
-               DebugPath = "~/js/respond.src.js"
-           }
-       ); // Load Bootstrap
-
     }
     
     void Application_End(object sender, EventArgs e) 

@@ -72,7 +72,6 @@
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="googlemapsapi" />
                 <asp:ScriptReference Name="sitejs" />
-                <asp:ScriptReference Name="respondjs" />
             </Scripts>
         </asp:ScriptManager>
     </form>
